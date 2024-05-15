@@ -1,0 +1,18 @@
+name: TFVARS Generator
+description: "Github Action to generate a terraform.tfvars file from Github's built-in secrets or variables."
+inputs:
+  file-name:
+    description: An optional file name to use when creating the file.
+    required: false
+    default: 'terraform.tfvars'
+  secret-mappings:
+    description: A multi-line string containing specific mappings for secret-to-tf-variable names.
+    required: false
+    default: ""
+  variable-mappings:
+    description: A multi-line string containing specific mappings for variable-to-tf-variable names.
+    required: false
+    default: ""
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
