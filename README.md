@@ -23,3 +23,6 @@ with:
     MY_VAR_SECRET=terraform_variable
     MY_VAR_SECRET2=terraform_variable2
 ```
+
+## Development
+You will need to run `npm run build` in order to compile the `index.js` file to `dist/index.js`.
